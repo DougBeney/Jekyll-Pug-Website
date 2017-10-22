@@ -1,0 +1,54 @@
+---
+---
+
+// Libraries
+@import "_lib/bootstrap"
+@import "_lib/sticky-footer"
+@import "_lib/pygments"
+
+// Your CSS Here
+
+.navbar
+	background-color: #A86454
+
+.page-container
+	margin-top: 35px
+
+h1,h2,h3,.navbar-brand
+	font-family: "Arvo"
+
+p
+	font-size: 17px
+
+
+.code-demo
+	color: white
+	pre
+		color: white
+
+.features
+	padding: 30px 0
+
+	.first-row .col-md
+		margin-bottom: 50px
+
+.docs-content
+	position: relative
+	height: 100%
+	max-height: 500px
+	overflow-y: scroll
+
+.docs-toc-mobile
+	display: none
+	margin-bottom: 30px
+	a
+		color: inherit
+
+@media screen and (max-width: 750px)
+	.docs-toc
+		display: none
+	.docs-toc-mobile
+		display: block
+	.docs-content
+		height: auto
+		max-height: none

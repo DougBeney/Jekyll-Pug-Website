@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Installation",
+		"url": "#installation"
+	},
+	{
+		"name": "Usage",
+		"url": "#usage"
+	},
+	{
+		"name": "Troubleshooting",
+		"url": "#troubleshooting"
+	},
+	{
+		"name": "HTML5 Boilerplate",
+		"url": "#html5-boilerplate"
+	},
+	{
+		"name": "Contributing",
+		"url": "#contributing"
+	},
+	{
+		"name": "Support on Beerpay",
+		"url": "#support-on-beerpay"
+	}
+]

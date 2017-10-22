@@ -1,0 +1,24 @@
+[
+	{
+		"name": "Home",
+		"url" : "/"
+	},
+	{
+		"name": "Documentation",
+		"url" : "/docs"
+	},
+	{
+		"name": "License",
+		"url" : "/license"
+	},
+	{
+		"name": "Github",
+		"url" : "https://github.com/DougBeney/jekyll-pug",
+		"new_tab": true
+	},
+	{
+		"name": "Contact",
+		"url" : "/contact"
+	},
+
+]

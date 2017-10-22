@@ -1,0 +1,21 @@
+---
+layout: blank
+---
+
+.container.page-container#docs
+
+	ul.list-group.docs-toc-mobile
+		| {% for docItem in site.data.docs %}
+		li.list-group-item: a(href="{{docItem.url}}") {{docItem.name}}
+		| {% endfor %}
+
+	.row
+		.col-lg-3
+			.list-group.docs-toc
+				| {% for docItem in site.data.docs %}
+				a.list-group-item.list-group-item-action(href="{{docItem.url}}") {{docItem.name}}
+				| {% endfor %}
+		.col-lg-9.docs-content(data-spy="scroll", data-target="#docs", data-offset="50")
+			h1 {{page.title}}
+
+			| {{content}}
