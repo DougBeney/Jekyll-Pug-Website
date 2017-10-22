@@ -1,9 +1,8 @@
 nav.navbar.navbar-expand-lg.bg-lightnavbar.navbar-dark
 	a.navbar-brand(href='/') {{site.title}}
-	button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-		span.navbar-toggler-icon
-	
 	span.navbar-text {{site.description}}
+	button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-label='Toggle navigation')
+		span.navbar-toggler-icon
 	
 	#navbarSupportedContent.collapse.navbar-collapse
 		
@@ -14,14 +13,4 @@ nav.navbar.navbar-expand-lg.bg-lightnavbar.navbar-dark
 					| {{nav.name}}
 					span.sr-only (current)
 			| {% endfor %}
-			
-		//- ul.navbar-nav.ml-auto
-		//- 	li.nav-item.active
-		//- 		a.nav-link(href='/')
-		//- 			| Home 
-		//- 			span.sr-only (current)
-		//- 	li.nav-item: a.nav-link(href='/docs') Documentation
-		//- 	li.nav-item: a.nav-link(href='/license') License
-		//- 	li.nav-item: a.nav-link(target="_blank", href='https://github.com/DougBeney/jekyll-pug') Github
-		//- 	li.nav-item: a.nav-link(href='/contact') Contact
 		

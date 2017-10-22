@@ -6,6 +6,11 @@ source: "_source"
 url: http://jekyll-pug.dougie.io
 livereload: true
 sass:
-    sass_dir: static/css
+  sass_dir: static/css
+jekyll-minifier:
+  remove_multi_spaces: false
+  compress_css: false
 
 highlighter: pygments
+
+
