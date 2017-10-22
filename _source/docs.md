@@ -1,6 +1,8 @@
 ---
 title: Documentation
 layout: docs
+SEOTitle: Jekyll-Pug Documentation / Tutorial
+SEODescription: Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!
 ---
    
 

@@ -6,3 +6,4 @@ Welcome! This is the source code for the Jekyll-Pug website. Edit away and have 
 ## Website TODO List
 
 - [ ] Add code demo section, showing a few snippets of Jekyll-Pug code.
+- [ ] Edit documentation CSS/syntax highlighting

@@ -1,6 +1,8 @@
 ---
 title: License
 layout: page
+SEOTitle: Jekyll-Pug License
+SEODescription: Jekyll-Pug is an open-source project listed under the MIT license.
 ---
    
 Copyright (c) 2017 FloeMedia, LLC

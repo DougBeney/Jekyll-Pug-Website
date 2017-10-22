@@ -1,11 +1,11 @@
+title: Jekyll-Pug
+description: Finally. A practical way to use Pug with Jekyll.
+
+source: "_source"
+
+url: http://jekyll-pug.dougie.io
 livereload: true
-
-highlighter: pygments
-
 sass:
     sass_dir: static/css
 
-host: 192.168.123.158
-
-title: Jekyll-Pug
-description: Finally. A practical way to use Pug with Jekyll.
+highlighter: pygments
