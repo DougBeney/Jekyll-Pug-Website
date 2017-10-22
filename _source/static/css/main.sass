@@ -8,10 +8,6 @@
 
 // Your CSS Here
 
-body
-	max-width: 100%
-	overflow-x: hidden
-
 .navbar
 	background-color: #A86454
 
@@ -29,6 +25,9 @@ p
 	color: white
 	pre
 		color: white
+
+.row
+	max-width: 100%
 
 .features
 	padding: 30px 0
@@ -56,6 +55,14 @@ p
 	.docs-content
 		height: auto
 		max-height: none
+
+	.features .row
+		margin: 0
+		text-align: center
+		.col-md p
+			max-width: 300px
+			margin: 0 auto
+			margin-bottom: 1rem
 
 @media screen and (max-width: 534px)
 	.navbar-text
