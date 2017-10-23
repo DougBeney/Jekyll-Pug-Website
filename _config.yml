@@ -10,4 +10,5 @@ sass:
 
 highlighter: pygments
 
-
+TwitterImage: /static/img/twitter-card.png
+FacebookImage: /static/img/open-graph.png

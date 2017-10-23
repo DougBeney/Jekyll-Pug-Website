@@ -165,9 +165,21 @@ This issue typically means that you do not have the NPM package `pug-cli` instal
 
 **Have an issue that's not listed here?** [Submit a New Issue](https://github.com/DougBeney/jekyll-pug/issues/new)
 
-# HTML5 Boilerplate
+## HTML5 Boilerplate
 
 If you're looking for a boilerplate template to speed up your Jekyll-Pug development even more, check out [J5 - A Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate](https://github.com/DougBeney/J5)
+
+## Deploying to Netlify
+
+Jekyll-Pug requires the pug-cli NPM package for its main functionality. 
+
+First, create a package.json file using the command `npm init`.
+
+Next, install pug-cli using `npm install pug-cli --save`.
+
+When Netlify builds your site, it will now install pug-cli. 
+
+If you're having any trouble whatsoever, do check out [Jekyll-Pug-Website's package.json](https://github.com/DougBeney/Jekyll-Pug-Website/blob/master/package.json)
 
 ## Contributing
 

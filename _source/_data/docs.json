@@ -16,6 +16,10 @@
 		"url": "#html5-boilerplate"
 	},
 	{
+		"name": "Deploying to Netlify",
+		"url": "#deploying-to-netlify"
+	},
+	{
 		"name": "Contributing",
 		"url": "#contributing"
 	},
