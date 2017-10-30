@@ -4,6 +4,10 @@
 		"url": "#installation"
 	},
 	{
+		"name": "Configuration",
+		"url": "#configuration"
+	},
+	{
 		"name": "Usage",
 		"url": "#usage"
 	},

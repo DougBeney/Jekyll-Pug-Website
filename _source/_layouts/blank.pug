@@ -33,12 +33,10 @@ html(lang="en")
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 			<![endif]-->
 		
-		| {% include parts/nav %}
-		
-		| {{content}}
-		
-		//- Looking for jQuery? jQuery is included in the main.js file
-		
-		| {% include parts/footer %}
+		.
+			{% include parts/nav %}
+			{{content}}
+			{% include parts/footer %}
 
+		//- Looking for jQuery? jQuery is included in the main.js file
 		script(src="/static/js/main.js")
