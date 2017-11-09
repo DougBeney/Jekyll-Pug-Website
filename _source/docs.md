@@ -5,19 +5,37 @@ SEOTitle: Jekyll-Pug Documentation / Tutorial
 SEODescription: Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!
 ---
    
-
-
 Finally be able to code with [Pug](https://github.com/pugjs/pug) on [Jekyll](http://github.com/mojombo/jekyll).
 
 Created by [Doug](https://dougie.io) of [FloeMedia](https://floemedia.com).
 
+
 ## Installation
 
-**Note:** you must have [pug-cli](https://www.npmjs.com/package/pug-cli) installed. To install it, simply enter the terminal command, `npm install pug-cli -g`.
+**Note:** you must have [pug-cli](https://www.npmjs.com/package/pug-cli) installed. To install it, simply enter the terminal command, `npm install pug-cli -g`. If you don't already have NPM/Node installed, [here are instructions](https://www.npmjs.com/get-npm)
 
 There are two ways to install this plugin.
 
-**Way #1**
+**Way #1 - Bundler (Recommended)**
+
+Since Bundler is now implemented into the Jekyll project, it is recommended to manage plugins using a Gemfile.
+
+Create a file named `Gemfile` in the root directory of your project and input the following code:
+
+```rb
+source "https://rubygems.org/"
+
+group :jekyll_plugins do
+  gem 'jekyll-pug'
+  # Add other Jekyll plugins you are using below this line.
+end
+```
+
+After that, type `bundle install` in your Terminal.
+
+You're done!
+
+**Way #2 - Installing the gem globally**
 
 In your terminal, type `gem install jekyll-pug`.
 
@@ -29,20 +47,6 @@ plugins:
 ```
 
 You're done!
-
-**Way #2 (Using Bundler)**
-
-If using [Bundler](http://gembundler.com), add the following to your `Gemfile`:
-
-```rb
-group :jekyll_plugins do
-  gem 'jekyll-pug'
-end
-```
-
-After that, type `bundle install` in your Terminal.
-
-*If you're having trouble setting up your Gemfile, make sure to include the line `source "https://rubygems.org"` at the top of your Gemfile.*
 
 ---
 
@@ -194,7 +198,7 @@ The code you should modify is in the `lib/` directory.
 
 - `lib/jekyll-pug.rb` - All this file does is require the main files of this plugin and work with the user's configuration file.
 - `lib/jekyll-pug/pug-renderer.rb` This file safely modifies Jekyll's rendering code.
-- `lib/jekyll-pug/include-tag.rb` This file safely modifies Jekyll's include tag, allowing for extensionless including and Pug support.
+- `lib/jekyll-pug/include-tag.rb` This file safely modifies Jekyll's include tag, allowing for extension-less including and Pug support.
 
 ## Support on Beerpay
 Hey dude! Help me out for a couple of :beers:!
