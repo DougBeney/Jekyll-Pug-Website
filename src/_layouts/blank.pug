@@ -1,6 +1,8 @@
 doctype
 html(lang="en")
 	head
+		include widgets/google-analytics.html
+
 		| {% if page.SEOTitle %}
 		title {{page.SEOTitle}}
 		| {% else %}
