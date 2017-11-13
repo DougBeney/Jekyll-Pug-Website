@@ -1,0 +1,14 @@
+
+<div class="container page-container" id="docs">
+  <ul class="list-group docs-toc-mobile">{% for docItem in site.data.docs %}
+    <li class="list-group-item"><a href="{{docItem.url}}">{{docItem.name}}</a></li>{% endfor %}
+  </ul>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="list-group docs-toc">{% for docItem in site.data.docs %}<a class="list-group-item list-group-item-action" href="{{docItem.url}}">{{docItem.name}}</a>{% endfor %}</div>
+    </div>
+    <div class="col-lg-9 docs-content" data-spy="scroll" data-target="#docs" data-offset="50">
+      <h1>{{page.title}}</h1>{{content}}
+    </div>
+  </div>
+</div>

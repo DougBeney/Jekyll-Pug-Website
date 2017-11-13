@@ -1,0 +1,27 @@
+.col
+	.row
+		.col
+			pre#frontpage_code
+				h3 Input (Pug)
+				.
+					{% highlight pug %}
+					---
+					title: My Awesome Page
+					---
+
+					h1 Welcome to {%raw%}{{page.title}}{%endraw%}
+
+					h2 Here is some Pug code
+					include some_pug_code
+					
+					h2 Here is an Einstein quote
+					include quotes/einstein.html
+
+					{% endhighlight %}
+		.col
+			pre#frontpage_code
+				h3 Output (HTML)
+				.
+					{% highlight html %}
+					{% include code-snippets/demo_output.html %}
+					{% endhighlight %}

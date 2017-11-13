@@ -24,6 +24,10 @@
 		"url": "#deploying-to-netlify"
 	},
 	{
+		"name": "Sites Using Jekyll-Pug",
+		"url": "#sites-using-jekyll-pug"
+	},
+	{
 		"name": "Contributing",
 		"url": "#contributing"
 	},

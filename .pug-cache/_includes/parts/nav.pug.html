@@ -1,0 +1,9 @@
+
+<nav class="navbar navbar-expand-lg bg-lightnavbar navbar-dark"><a class="navbar-brand" href="/">{{site.title}}</a><span class="navbar-text">{{site.description}}</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">{% for nav in site.data.nav %}
+      <li class="nav-item {% if nav.name == page.title %}active{% endif %}"><a class="nav-link" target="{% if nav.new_tab%}_blank{% endif %}" href="{{nav.url}}">{{nav.name}}<span class="sr-only">(current)</span></a></li>{% endfor %}
+    </ul>
+  </div>
+</nav>

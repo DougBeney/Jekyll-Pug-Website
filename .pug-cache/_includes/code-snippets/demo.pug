@@ -1,0 +1,15 @@
+.col
+	pre#frontpage_code
+		h3 Input
+		.
+			{% highlight haml %}
+			---
+			title: My Beautiful Page
+			---
+
+			h1 {{page.title}}
+
+			include quotes/einstein
+
+			include copyright_text.html
+			{% endhighlight %}

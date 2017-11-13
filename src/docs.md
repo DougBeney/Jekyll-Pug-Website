@@ -7,7 +7,7 @@ SEODescription: Learn how to use the Jekyll-Pug plugin for Jekyll. Create static
    
 Finally be able to code with [Pug](https://github.com/pugjs/pug) on [Jekyll](http://github.com/mojombo/jekyll).
 
-Created by [Doug](https://dougie.io) of [FloeMedia](https://floemedia.com).
+Created by [Doug Beney](https://dougie.io).
 
 
 ## Installation
@@ -41,7 +41,7 @@ In your terminal, type `gem install jekyll-pug`.
 
 Then, edit your `_config.yml` and add the following.
 
-```yml
+```yaml
 plugins:
     - jekyll-pug
 ```
@@ -52,15 +52,24 @@ You're done!
 
 ## Configuration
 
-The only setting currently available in configuration is minification. This will tell the Pug command line tool whether to minify the output or not.
+The main setting available in configuration is minification. This will tell the Pug command line tool whether or not to minify the output.
 
 Minification is disabled by default. 
 
 To turn it on, add this to your `_config.yml`:
 
-```yml
+```yaml
 jekyll-pug:
   minify: true
+```
+
+If you are running into an issue, it could also help to enable Jekyll-Pug debugging. This will print a lot more to the console when your Jekyll project is building. **Debugging is disabled by default.**
+
+To enable debugging, use the following in your `_config.yml`:
+
+```yaml
+jekyll-pug:
+  debug: true
 ```
 
 ## Usage
@@ -99,10 +108,10 @@ p Welcome to my home page. Isn't it awesome?
 doctype
 html
     head
-        title {{page.title}}
+        title {% raw %}{{page.title}}{% endraw %}
     body
-        h1 {{page.title}}
-        | {{content}}
+        h1 {% raw %}{{page.title}}{% endraw %}
+        | {% raw %}{{content}}{% endraw %}
 ```
 
 ---
@@ -111,7 +120,7 @@ html
 
 Jekyll's `include` tag has been safely modified to support pug. Pug's native `include` tag will also look in the `_includes` folder.
 
-```
+```pug
 h1 This code will include nav.pug
 | {% raw %}{% include nav %}{% endraw %}
 
@@ -123,21 +132,21 @@ include nav
 
 You can alternatively type the extension out.
 
-```
+```pug
 h1 This code will include nav.pug
 | {% raw %}{% include nav.pug %}{% endraw %}
 ```
 
 Have an HTML file you want to include? No problem! Do this:
 
-```
+```pug
 h1 This code will include nav.html
 | {% raw %}{% include nav.html %}{% endraw %}
 ```
 
 Have an SVG file you want to include? No problem! Do this:
 
-```
+```pug
 h1 This code will include logo.svg
 | {% raw %}{% include logo.svg %}{% endraw %}
 ```
@@ -175,6 +184,33 @@ Next, install pug-cli using `npm install pug-cli --save`.
 When Netlify builds your site, it will now install pug-cli. 
 
 If you're having any trouble whatsoever, do check out [Jekyll-Pug-Website's package.json](https://github.com/DougBeney/Jekyll-Pug-Website/blob/master/package.json) file as a reference.
+
+## Sites Using Jekyll-Pug
+
+### Jekyll-Pug-Website [Free/Open-Source]
+
+![Jekyll-Pug-Website screenshot](/static/img/promo/jekyll-pug-website.png)
+
+- Link: [material.jekyll-pug.dougie.io](http://material.jekyll-pug.dougie.io)
+- Source: [github.com/DougBeney/Jekyll-Pug-Website](https://github.com/DougBeney/Jekyll-Pug-Website)
+
+### Material-Jekyll-Pug [Free/Open-Source]
+
+![Material-Jekyll-Pug screenshot](/static/img/promo/jekyll-pug-material.png)
+
+- Link: [material.jekyll-pug.dougie.io](http://material.jekyll-pug.dougie.io)
+- Source: [github.com/DougBeney/jekyll-pug-material](https://github.com/DougBeney/jekyll-pug-material)
+
+### Mover.io
+
+![Mover.io screenshot](/static/img/promo/mover-io.png)
+
+- Link: [Mover.io](https://mover.io/)
+- Source: Private
+
+---
+
+**Want your Jekyll-Pug website to be featured here?** [Submit it here](https://github.com/DougBeney/jekyll-pug/issues/6)
 
 ## Contributing
 

@@ -1,0 +1,52 @@
+---
+title: Home
+
+SEOTitle: Jekyll-Pug - The Ultimate Pug Integration For Jekyll
+SEODescription: If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Pug.
+
+layout: blank
+---
+
+.jumbotron
+	.container: .row
+		.col
+			h1.display-3 Jekyll-Pug
+			p.lead Easily and Intuitively Use Pug For Developing Jekyll Websites.
+			hr.my-4
+			p.lead
+				a.btn.btn-primary.btn-lg(href="/docs", role="button") Getting Started
+			p 
+				| You can also 
+				a(href="https://github.com/DougBeney/J5") contribute 
+				| or 
+				a(href="https://github.com/DougBeney/jekyll-pug") on Github.
+		.col-md-4.
+			<h2>Add this to your Gemfile:</h2>
+			{% highlight ruby %}{% include code-snippets/gemfile.txt %}{% endhighlight %}
+		.col-md-1
+		
+.container.code-demo
+	h2.h1.text-center Example Usage
+	include code-snippets/demo
+.features-block.white-text
+	.container.features
+		.row.first-row
+			.col-md
+				h3 Contribute
+				p Aching to add a feature or improve an exisiting one? Your help would be greatly appreciated.
+				a.btn.btn-outline-info(href="https://github.com/DougBeney/jekyll-pug#contributing", role="button") Contribute
+			.col-md
+				h3 J5 Boilerplate
+				p J5 is a Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate template for productivity.
+				a.btn.btn-outline-info(href="https://github.com/DougBeney/J5", role="button") Get J5
+			.col-md
+				h3 Support This Project
+				p If you feel inclined to donate, do check out our BeerPay page.
+				a.btn.btn-outline-info(href="https://beerpay.io/DougBeney/jekyll-pug", role="button") Donate
+		.row
+			.col-md
+			.col-md
+				h3 Edit This Website
+				p This open-source website was created using Jekyll-Pug, J5, and Bootstrap 4.0.
+				a.btn.btn-outline-info(href="https://github.com/DougBeney/Jekyll-Pug-Website", role="button") Edit This Site
+			.col-md

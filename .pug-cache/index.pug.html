@@ -1,0 +1,76 @@
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-3">Jekyll-Pug</h1>
+        <p class="lead">Easily and Intuitively Use Pug For Developing Jekyll Websites.</p>
+        <hr class="my-4"/>
+        <p class="lead"><a class="btn btn-primary btn-lg" href="/docs" role="button">Getting Started</a></p>
+        <p>
+           You can also <a href="https://github.com/DougBeney/J5">contribute </a>or <a href="https://github.com/DougBeney/jekyll-pug">on Github.</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Add this to your Gemfile:</h2>
+        {% highlight ruby %}{% include code-snippets/gemfile.txt %}{% endhighlight %}
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
+<div class="container code-demo">
+  <h2 class="h1 text-center">Example Usage</h2>
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <pre id="frontpage_code">
+          <h3>Input (Pug)</h3>{% highlight pug %}
+---
+title: My Awesome Page
+---
+
+h1 Welcome to {%raw%}{{page.title}}{%endraw%}
+
+h2 Here is some Pug code
+include some_pug_code
+
+h2 Here is an Einstein quote
+include quotes/einstein.html
+
+{% endhighlight %}</pre>
+      </div>
+      <div class="col">
+        <pre id="frontpage_code">
+          <h3>Output (HTML)</h3>{% highlight html %}
+{% include code-snippets/demo_output.html %}
+{% endhighlight %}</pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="features-block white-text">
+  <div class="container features">
+    <div class="row first-row">
+      <div class="col-md">
+        <h3>Contribute</h3>
+        <p>Aching to add a feature or improve an exisiting one? Your help would be greatly appreciated.</p><a class="btn btn-outline-info" href="https://github.com/DougBeney/jekyll-pug#contributing" role="button">Contribute</a>
+      </div>
+      <div class="col-md">
+        <h3>J5 Boilerplate</h3>
+        <p>J5 is a Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate template for productivity.</p><a class="btn btn-outline-info" href="https://github.com/DougBeney/J5" role="button">Get J5</a>
+      </div>
+      <div class="col-md">
+        <h3>Support This Project</h3>
+        <p>If you feel inclined to donate, do check out our BeerPay page.</p><a class="btn btn-outline-info" href="https://beerpay.io/DougBeney/jekyll-pug" role="button">Donate</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md"></div>
+      <div class="col-md">
+        <h3>Edit This Website</h3>
+        <p>This open-source website was created using Jekyll-Pug, J5, and Bootstrap 4.0.</p><a class="btn btn-outline-info" href="https://github.com/DougBeney/Jekyll-Pug-Website" role="button">Edit This Site</a>
+      </div>
+      <div class="col-md"></div>
+    </div>
+  </div>
+</div>
