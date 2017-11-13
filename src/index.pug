@@ -16,15 +16,16 @@ layout: blank
 			p.lead
 				a.btn.btn-primary.btn-lg(href="/docs", role="button") Getting Started
 			p 
-				| You can also 
-				a(href="https://github.com/DougBeney/J5") contribute 
-				| or 
-				a(href="https://github.com/DougBeney/jekyll-pug") on Github.
+				| You can also view this project on 
+				a(href="https://github.com/DougBeney/jekyll-pug") on Github
 		.col-md-4.
-			<h2>Add this to your Gemfile:</h2>
+			<h2>Install by adding this to your Gemfile:</h2>
 			{% highlight ruby %}{% include code-snippets/gemfile.txt %}{% endhighlight %}
 		.col-md-1
-		
+
+.container
+	include parts/email-opt-in
+	
 .container.code-demo
 	h2.h1.text-center Example Usage
 	include code-snippets/demo
