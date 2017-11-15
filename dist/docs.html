@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109573755-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109573755-1');
+</script>
+    
     <title>Jekyll-Pug Documentation / Tutorial</title>
     
     <meta name="description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!">
@@ -53,25 +63,29 @@
     <li class="list-group-item"><a href="#installation">Installation</a></li>
     <li class="list-group-item"><a href="#configuration">Configuration</a></li>
     <li class="list-group-item"><a href="#usage">Usage</a></li>
+    <li class="list-group-item"><a href="#using-shipped-pug-versions">Using Shipped Pug Versions</a></li>
     <li class="list-group-item"><a href="#troubleshooting">Troubleshooting</a></li>
     <li class="list-group-item"><a href="#html5-boilerplate">HTML5 Boilerplate</a></li>
     <li class="list-group-item"><a href="#deploying-to-netlify">Deploying to Netlify</a></li>
+    <li class="list-group-item"><a href="#deploying-to-siteleaf">Deploying to Siteleaf</a></li>
     <li class="list-group-item"><a href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a></li>
     <li class="list-group-item"><a href="#contributing">Contributing</a></li>
     <li class="list-group-item"><a href="#support-on-beerpay">Support on Beerpay</a></li>
   </ul>
   <div class="row">
     <div class="col-lg-3">
-      <div class="list-group docs-toc"><a class="list-group-item list-group-item-action" href="#installation">Installation</a><a class="list-group-item list-group-item-action" href="#configuration">Configuration</a><a class="list-group-item list-group-item-action" href="#usage">Usage</a><a class="list-group-item list-group-item-action" href="#troubleshooting">Troubleshooting</a><a class="list-group-item list-group-item-action" href="#html5-boilerplate">HTML5 Boilerplate</a><a class="list-group-item list-group-item-action" href="#deploying-to-netlify">Deploying to Netlify</a><a class="list-group-item list-group-item-action" href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a><a class="list-group-item list-group-item-action" href="#contributing">Contributing</a><a class="list-group-item list-group-item-action" href="#support-on-beerpay">Support on Beerpay</a></div>
+      <div class="list-group docs-toc"><a class="list-group-item list-group-item-action" href="#installation">Installation</a><a class="list-group-item list-group-item-action" href="#configuration">Configuration</a><a class="list-group-item list-group-item-action" href="#usage">Usage</a><a class="list-group-item list-group-item-action" href="#using-shipped-pug-versions">Using Shipped Pug Versions</a><a class="list-group-item list-group-item-action" href="#troubleshooting">Troubleshooting</a><a class="list-group-item list-group-item-action" href="#html5-boilerplate">HTML5 Boilerplate</a><a class="list-group-item list-group-item-action" href="#deploying-to-netlify">Deploying to Netlify</a><a class="list-group-item list-group-item-action" href="#deploying-to-siteleaf">Deploying to Siteleaf</a><a class="list-group-item list-group-item-action" href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a><a class="list-group-item list-group-item-action" href="#contributing">Contributing</a><a class="list-group-item list-group-item-action" href="#support-on-beerpay">Support on Beerpay</a></div>
     </div>
     <div class="col-lg-9 docs-content" data-spy="scroll" data-target="#docs" data-offset="50">
       <h1>Documentation</h1><p>Finally be able to code with <a href="https://github.com/pugjs/pug">Pug</a> on <a href="http://github.com/mojombo/jekyll">Jekyll</a>.</p>
 
 <p>Created by <a href="https://dougie.io">Doug Beney</a>.</p>
 
+<p>If you enjoy this project, do <a href="http://jekyll-pug.dougie.io/">sign up for my email list</a> to receive info on other plugins and tools I create for Jekyll.</p>
+
 <h2 id="installation">Installation</h2>
 
-<p><strong>Note:</strong> you must have <a href="https://www.npmjs.com/package/pug-cli">pug-cli</a> installed. To install it, simply enter the terminal command, <code>npm install pug-cli -g</code>. If you don&#39;t already have NPM/Node installed, <a href="https://www.npmjs.com/get-npm">here are instructions</a></p>
+<p><strong>Note:</strong> you must have <a href="https://www.npmjs.com/package/pug">pug</a> installed. To install it, simply enter the terminal command, <code>npm install pug -g</code>. If you don&#39;t already have NPM/Node installed, <a href="https://www.npmjs.com/get-npm">here are instructions</a></p>
 
 <p>There are two ways to install this plugin.</p>
 
@@ -187,6 +201,32 @@
 
 <hr>
 
+<h2 id="using-shipped-pug-versions">Using Shipped Pug Versions</h2>
+
+<p><strong>Important note:</strong> Advanced Pug features such as includes, may not work using a shipped pug library. In this case, it is best to use Jekyll&#39;s built-in includes. (<code>| {% include nav %}</code>)</p>
+
+<p>If you do not wish to install pug via NPM or if you are deploying to a location, <a href="#deploying-to-siteleaf">such as Siteleaf</a>, you can select a shipped Pug version via your <code>_config.yml</code>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>jekyll-pug:
+  shipped_version: 2.0.0-beta10
+</code></pre></div>
+<p>The current versions available are:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>2.0.0-beta10
+2.0.0-beta11
+2.0.0-beta12
+2.0.0-beta1
+2.0.0-beta2
+2.0.0-beta3
+2.0.0-beta4
+2.0.0-beta5
+2.0.0-beta6
+2.0.0-beta7
+2.0.0-beta8
+2.0.0-beta9
+2.0.0-rc.1
+2.0.0-rc.2
+2.0.0-rc.3
+2.0.0-rc.4
+</code></pre></div>
 <h2 id="troubleshooting">Troubleshooting</h2>
 
 <h3 id="no-such-file-or-directory-pug">&quot;No such file or directory - pug&quot;</h3>
@@ -210,6 +250,21 @@
 <p>When Netlify builds your site, it will now install pug-cli. </p>
 
 <p>If you&#39;re having any trouble whatsoever, do check out <a href="https://github.com/DougBeney/Jekyll-Pug-Website/blob/master/package.json">Jekyll-Pug-Website&#39;s package.json</a> file as a reference.</p>
+
+<h2 id="deploying-to-siteleaf">Deploying to Siteleaf</h2>
+
+<p>To deploy to Siteleaf, first make sure your <code>Gemfile</code> is properly set up. (<a href="#installation">See Jekyll-Pug installation instructions using a Gemfile</a>)</p>
+
+<p>Next, make sure your <code>_config.yml</code> includes the following:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>plugins:
+- jekyll-pug
+
+jekyll-pug:
+  shipped_version: 2.0.0-beta10
+</code></pre></div>
+<p>You&#39;re all set! Enjoy having a full CMS with Jekyll-Pug!</p>
+
+<p><strong>Note:</strong> To use custom plugins, you must be a premium Siteleaf user. Currently Jekyll-Pug is not a whitelisted plugin by Siteleaf/Github. If/when that happens, users on the free plan will be able to use Jekyll-Pug. The whitelist is controlled by Github and you can view a list of <a href="https://pages.github.com/versions/">whitelisted plugins here</a></p>
 
 <h2 id="sites-using-jekyll-pug">Sites Using Jekyll-Pug</h2>
 

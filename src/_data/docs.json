@@ -12,6 +12,10 @@
 		"url": "#usage"
 	},
 	{
+		"name": "Using Shipped Pug Versions",
+		"url": "#using-shipped-pug-versions"
+	},
+	{
 		"name": "Troubleshooting",
 		"url": "#troubleshooting"
 	},
@@ -22,6 +26,10 @@
 	{
 		"name": "Deploying to Netlify",
 		"url": "#deploying-to-netlify"
+	},
+	{
+		"name": "Deploying to Siteleaf",
+		"url": "#deploying-to-siteleaf"
 	},
 	{
 		"name": "Sites Using Jekyll-Pug",
