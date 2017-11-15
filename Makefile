@@ -1,6 +1,10 @@
 all:
 	echo "Welcome!"
 
+netlify:
+	npm install -g pug
+	jekyll build
+
 update: update_documentation update_license
 
 update_documentation:
