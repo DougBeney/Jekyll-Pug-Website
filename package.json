@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/DougBeney/Jekyll-Pug-Website#readme",
   "dependencies": {
-    "pug-cli": "^1.0.0-alpha6"
+    "pug": "^1.0.0-alpha6"
   }
 }
