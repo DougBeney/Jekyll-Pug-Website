@@ -4,12 +4,12 @@
 		"url": "#installation"
 	},
 	{
-		"name": "Configuration",
-		"url": "#configuration"
-	},
-	{
 		"name": "Usage",
 		"url": "#usage"
+	},
+	{
+		"name": "Configuration",
+		"url": "#configuration"
 	},
 	{
 		"name": "Using Shipped Pug Versions",
