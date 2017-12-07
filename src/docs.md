@@ -54,7 +54,9 @@ You're done!
 
 ## Configuration
 
-The main setting available in configuration is minification. This will tell the Pug command line tool whether or not to minify the output.
+Here are the different configuration options you can set in `_config.yml`.
+
+**Minification**
 
 Minification is disabled by default. 
 
@@ -64,6 +66,20 @@ To turn it on, add this to your `_config.yml`:
 jekyll-pug:
   minify: true
 ```
+
+**Compiling to PHP instead of HTML**
+
+If you need PHP files instead of HTML files, enabling this feature will compile all pup files to `.php` files.
+
+I added this feature because it is very useful in my Wordpress theme development workflow.
+
+```yaml
+jekyll-pug:
+  php: true
+```
+
+
+**Enabling debug mode**
 
 If you are running into an issue, it could also help to enable Jekyll-Pug debugging. This will print a lot more to the console when your Jekyll project is building. **Debugging is disabled by default.**
 

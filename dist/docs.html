@@ -64,7 +64,6 @@
     <li class="list-group-item"><a href="#configuration">Configuration</a></li>
     <li class="list-group-item"><a href="#usage">Usage</a></li>
     <li class="list-group-item"><a href="#using-shipped-pug-versions">Using Shipped Pug Versions</a></li>
-    <li class="list-group-item"><a href="#troubleshooting">Troubleshooting</a></li>
     <li class="list-group-item"><a href="#html5-boilerplate">HTML5 Boilerplate</a></li>
     <li class="list-group-item"><a href="#deploying-to-netlify">Deploying to Netlify</a></li>
     <li class="list-group-item"><a href="#deploying-to-siteleaf">Deploying to Siteleaf</a></li>
@@ -74,7 +73,7 @@
   </ul>
   <div class="row">
     <div class="col-lg-3">
-      <div class="list-group docs-toc"><a class="list-group-item list-group-item-action" href="#installation">Installation</a><a class="list-group-item list-group-item-action" href="#configuration">Configuration</a><a class="list-group-item list-group-item-action" href="#usage">Usage</a><a class="list-group-item list-group-item-action" href="#using-shipped-pug-versions">Using Shipped Pug Versions</a><a class="list-group-item list-group-item-action" href="#troubleshooting">Troubleshooting</a><a class="list-group-item list-group-item-action" href="#html5-boilerplate">HTML5 Boilerplate</a><a class="list-group-item list-group-item-action" href="#deploying-to-netlify">Deploying to Netlify</a><a class="list-group-item list-group-item-action" href="#deploying-to-siteleaf">Deploying to Siteleaf</a><a class="list-group-item list-group-item-action" href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a><a class="list-group-item list-group-item-action" href="#contributing">Contributing</a><a class="list-group-item list-group-item-action" href="#support-on-beerpay">Support on Beerpay</a></div>
+      <div class="list-group docs-toc"><a class="list-group-item list-group-item-action" href="#installation">Installation</a><a class="list-group-item list-group-item-action" href="#configuration">Configuration</a><a class="list-group-item list-group-item-action" href="#usage">Usage</a><a class="list-group-item list-group-item-action" href="#using-shipped-pug-versions">Using Shipped Pug Versions</a><a class="list-group-item list-group-item-action" href="#html5-boilerplate">HTML5 Boilerplate</a><a class="list-group-item list-group-item-action" href="#deploying-to-netlify">Deploying to Netlify</a><a class="list-group-item list-group-item-action" href="#deploying-to-siteleaf">Deploying to Siteleaf</a><a class="list-group-item list-group-item-action" href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a><a class="list-group-item list-group-item-action" href="#contributing">Contributing</a><a class="list-group-item list-group-item-action" href="#support-on-beerpay">Support on Beerpay</a></div>
     </div>
     <div class="col-lg-9 docs-content" data-spy="scroll" data-target="#docs" data-offset="50">
       <h1>Documentation</h1><p>Finally be able to code with <a href="https://github.com/pugjs/pug">Pug</a> on <a href="http://github.com/mojombo/jekyll">Jekyll</a>.</p>
@@ -119,7 +118,9 @@
 
 <h2 id="configuration">Configuration</h2>
 
-<p>The main setting available in configuration is minification. This will tell the Pug command line tool whether or not to minify the output.</p>
+<p>Here are the different configuration options you can set in <code>_config.yml</code>.</p>
+
+<p><strong>Minification</strong></p>
 
 <p>Minification is disabled by default. </p>
 
@@ -127,6 +128,16 @@
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">jekyll-pug</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">minify</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
+<p><strong>Compiling to PHP instead of HTML</strong></p>
+
+<p>If you need PHP files instead of HTML files, enabling this feature will compile all pup files to <code>.php</code> files.</p>
+
+<p>I added this feature because it is very useful in my Wordpress theme development workflow.</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">jekyll-pug</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">php</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p><strong>Enabling debug mode</strong></p>
+
 <p>If you are running into an issue, it could also help to enable Jekyll-Pug debugging. This will print a lot more to the console when your Jekyll project is building. <strong>Debugging is disabled by default.</strong></p>
 
 <p>To enable debugging, use the following in your <code>_config.yml</code>:</p>
@@ -227,29 +238,22 @@
 2.0.0-rc.3
 2.0.0-rc.4
 </code></pre></div>
-<h2 id="troubleshooting">Troubleshooting</h2>
-
-<h3 id="no-such-file-or-directory-pug">&quot;No such file or directory - pug&quot;</h3>
-
-<p>This issue typically means that you do not have the NPM package <code>pug-cli</code> installed globally. <a href="https://github.com/DougBeney/jekyll-pug/issues/3">Here is the solution</a></p>
-
-<p><strong>Have an issue that&#39;s not listed here?</strong> <a href="https://github.com/DougBeney/jekyll-pug/issues/new">Submit a New Issue</a></p>
-
 <h2 id="html5-boilerplate">HTML5 Boilerplate</h2>
 
 <p>If you&#39;re looking for a boilerplate template to speed up your Jekyll-Pug development even more, check out <a href="https://github.com/DougBeney/J5">J5 - A Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate</a></p>
 
 <h2 id="deploying-to-netlify">Deploying to Netlify</h2>
 
-<p>Jekyll-Pug requires the pug-cli NPM package for its main functionality. </p>
+<p>Jekyll-Pug requires the Pug NPM package for its main functionality. </p>
 
-<p>First, create a package.json file using the command <code>npm init</code>.</p>
+<p>First, create a file called <code>Makefile</code> with the following content:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>netlify:
+  npm install pug -g
+  jekyll build
+</code></pre></div>
+<p>Now, log into Netlify, go into your site settings, go to the &quot;Build &amp; deploy&quot; section. Now, under &quot;Deploy settings&quot; click &quot;Edit settings&quot; and finally change your build command to <code>make netlify</code>.</p>
 
-<p>Next, install pug-cli using <code>npm install pug-cli --save</code>.</p>
-
-<p>When Netlify builds your site, it will now install pug-cli. </p>
-
-<p>If you&#39;re having any trouble whatsoever, do check out <a href="https://github.com/DougBeney/Jekyll-Pug-Website/blob/master/package.json">Jekyll-Pug-Website&#39;s package.json</a> file as a reference.</p>
+<p>You&#39;re all set! Enjoy!</p>
 
 <h2 id="deploying-to-siteleaf">Deploying to Siteleaf</h2>
 
