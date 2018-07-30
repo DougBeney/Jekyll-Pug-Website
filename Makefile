@@ -17,7 +17,7 @@ update_documentation:
 	@echo "---" >> src/docs.md 
 	@echo "   " >> src/docs.md 
 	echo "Adding content to docs.md"
-	@curl https://raw.githubusercontent.com/DougBeney/jekyll-pug/master/README.md >> src/docs.md
+	@curl https://gitlab.com/dougbeney/Jekyll-Bliss/raw/2394aba28df1f2d65b0342d2def80e28ea973035/README.md >> src/docs.md
 	echo "Running docsRegexReplacer.rb"
 	@ruby docsRegexReplacer.rb
 

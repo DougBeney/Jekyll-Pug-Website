@@ -1,8 +1,8 @@
 ---
 title: Home
 
-SEOTitle: Jekyll-Pug - The Ultimate Pug Integration For Jekyll
-SEODescription: If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Pug.
+SEOTitle: Jekyll-Bliss - The Ultimate Pug Integration For Jekyll
+SEODescription: If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss.
 
 layout: blank
 ---
@@ -10,40 +10,36 @@ layout: blank
 .jumbotron
 	.container: .row
 		.col
-			h1.display-3 Jekyll-Pug
+			h1.display-3 Jekyll-Bliss
 			p.lead Easily and Intuitively Use Pug For Developing Jekyll Websites.
 			hr.my-4
 			p.lead
 				a.btn.btn-primary.btn-lg(href="/docs", role="button") Getting Started
-			p 
+			p
 				| You can also view this project on 
-				a(href="https://github.com/DougBeney/jekyll-pug") on Github
+				a(href="https://gitlab.com/DougBeney/Jekyll-Bliss") on Gitlab
 		.col-md-4.
-			<h2>Install by adding this to your Gemfile:</h2>
-			{% highlight ruby %}{% include code-snippets/gemfile.txt %}{% endhighlight %}
+			<h2>Install with one command</h2>
+			{% highlight bash %}$ npm install jekyll-bliss -g{% endhighlight %}
 		.col-md-1
 
 .container
-	include parts/email-opt-in
-	
+	include _includes/parts/email-opt-in
+
 .container.code-demo
-	h2.h1.text-center Example Usage
-	include code-snippets/demo
+	h2.h1.text-center Input and Output
+	include _includes/code-snippets/demo
 .features-block.white-text
 	.container.features
 		.row.first-row
 			.col-md
 				h3 Contribute
 				p Aching to add a feature or improve an exisiting one? Your help would be greatly appreciated.
-				a.btn.btn-outline-info(href="https://github.com/DougBeney/jekyll-pug#contributing", role="button") Contribute
-			.col-md
-				h3 J5 Boilerplate
-				p J5 is a Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate template for productivity.
-				a.btn.btn-outline-info(href="https://github.com/DougBeney/J5", role="button") Get J5
+				a.btn.btn-outline-info(href="https://gitlab.com/DougBeney/jekyll-Bliss#development-usage", role="button") Contribute
 			.col-md
 				h3 Support This Project
 				p If you feel inclined to donate, do check out our BeerPay page.
-				a.btn.btn-outline-info(href="https://beerpay.io/DougBeney/jekyll-pug", role="button") Donate
+				a.btn.btn-outline-info(href="https://beerpay.io/DougBeney/jekyll-Bliss", role="button") Donate
 		.row
 			.col-md
 			.col-md

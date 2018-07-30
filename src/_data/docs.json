@@ -12,31 +12,27 @@
 		"url": "#configuration"
 	},
 	{
-		"name": "Using Shipped Pug Versions",
-		"url": "#using-shipped-pug-versions"
+		"name": "Deploying to Various Platforms",
+		"url": "#deploying-to-various-platforms"
 	},
 	{
-		"name": "HTML5 Boilerplate",
-		"url": "#html5-boilerplate"
+		"name": "Results from using Jekyll-Bliss",
+		"url": "#results-from-using-jekyll-bliss"
 	},
 	{
-		"name": "Deploying to Netlify",
-		"url": "#deploying-to-netlify"
+		"name": "Migrate from Jekyll-Pug to Jekyll-Bliss",
+		"url": "#using-jekyll-pug-how-to-migrate-from-jekyll-pug-to-jekyll-bliss"
 	},
 	{
-		"name": "Deploying to Siteleaf",
-		"url": "#deploying-to-siteleaf"
+		"name": "Future",
+		"url": "#future"
 	},
 	{
-		"name": "Sites Using Jekyll-Pug",
-		"url": "#sites-using-jekyll-pug"
+		"name": "Development usage",
+		"url": "#development-usage"
 	},
 	{
-		"name": "Contributing",
-		"url": "#contributing"
-	},
-	{
-		"name": "Support on Beerpay",
-		"url": "#support-on-beerpay"
+		"name": "Donate",
+		"url": "#donate"
 	}
 ]

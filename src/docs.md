@@ -4,304 +4,127 @@ layout: docs
 SEOTitle: Jekyll-Pug Documentation / Tutorial
 SEODescription: Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!
 ---
-   
-Finally be able to code with [Pug](https://github.com/pugjs/pug) on [Jekyll](http://github.com/mojombo/jekyll).
 
-Created by [Doug Beney](https://dougie.io).
+Jekyll is my favorite static site generator because it is very non-opinionated. The folder structure is super simplistic and feels natural.
 
-If you enjoy this project, do [sign up for my email list](http://jekyll-pug.dougie.io/) to receive info on other plugins and tools I create for Jekyll.
+However, there is one major problem with Jekyll: **The build time**. If you have a small site, this may not be a problem, but once you start accumulating many posts, installing a variety of plugins and using many files that should be preprocessed, your build time will skyrocket.
 
+The aims of this project is to allow Jekyll-Bliss to do all of the heavy-lifting (Markdown, JS, Sass/SCSS, Pug, etc) and allow Jekyll to do the smallest amount of work possible - compiling HTML files.
 
-## Installation
+# Installation
 
-**Note:** you must have [pug](https://www.npmjs.com/package/pug) installed. To install it, simply enter the terminal command, `npm install pug -g`. If you don't already have NPM/Node installed, [here are instructions](https://www.npmjs.com/get-npm)
+To install: `npm install jekyll-bliss -g`
 
-There are two ways to install this plugin.
+# Usage
 
-**Way #1 - Bundler (Recommended)**
+The command is `bliss`.
 
-Since Bundler is now implemented into the Jekyll project, it is recommended to manage plugins using a Gemfile.
+```
+  Usage: bliss [options]
 
-Create a file named `Gemfile` in the root directory of your project and input the following code:
+  Options:
 
-```rb
-source "https://rubygems.org/"
+    -V, --version  output the version number
+    -h, --help     output usage information
 
-group :jekyll_plugins do
-  gem 'jekyll-pug'
-  # Add other Jekyll plugins you are using below this line.
-end
+  Commands:
+
+    build          Build your site
+    serve,server,s Serve your site locally w/ livereload
+    clean          Remove build directory
+    config         Display the current configuraton
 ```
 
-After that, type `bundle install` in your Terminal.
+# Configuration
 
-You're done!
-
-**Way #2 - Installing the gem globally**
-
-In your terminal, type `gem install jekyll-pug`.
-
-Then, edit your `_config.yml` and add the following.
+Here are the default values Jekyll-Bliss uses. You can override these in your _config.yaml
 
 ```yaml
-plugins:
-    - jekyll-pug
+source: ''
+destination: _site
+exclude: []
+jekyll-bliss:
+  build-folder: _build
+  delete-build-folder: true
+  source: .
+  debug: false
+  livereload: false
+  watch: false
 ```
 
-You're done!
+**Note:** If you enable `livereload`, `watch` will automatically be enabled too.
 
----
+## Deploying to Various Platforms
 
-## Usage
-
-Now you can create Pug pages, templates, and includes, just like you would with HTML files.
-
-**Important:** Always make sure to have YAML front matter at the top of your pug pages. Layouts and includes don't need this, but plain-old pages do.
-
-**Example:**
-
-```pug
----
----
-
-h1 Hello World!
-```
-
----
-
-**Practical Example:**
-
-**index.pug**
-
-```pug
----
-title: Home Page
-layout: default
----
-
-p Welcome to my home page. Isn't it awesome?
-```
-
-**_layouts/default.pug**
-
-```pug
-doctype
-html
-    head
-        title {% raw %}{{page.title}}{% endraw %}
-    body
-        h1 {% raw %}{{page.title}}{% endraw %}
-        | {% raw %}{{content}}{% endraw %}
-```
-
----
-
-### Include
-
-Jekyll's `include` tag has been safely modified to support pug. Pug's native `include` tag will also look in the `_includes` folder.
-
-```pug
-h1 This code will include nav.pug
-| {% raw %}{% include nav %}{% endraw %}
-
-h1 Or you could use Pug's native include tag
-include nav
-```
-
-**Note**: The `|` symbol in this example code is a pipe character which tells Pug that we would like to render plain-text. Since Pug's templating engine processes our code before Jekyll, it's important to include this pipe character. [Read more  about piped text here](https://pugjs.org/language/plain-text.html#piped-text).
-
-You can alternatively type the extension out.
-
-```pug
-h1 This code will include nav.pug
-| {% raw %}{% include nav.pug %}{% endraw %}
-```
-
-Have an HTML file you want to include? No problem! Do this:
-
-```pug
-h1 This code will include nav.html
-| {% raw %}{% include nav.html %}{% endraw %}
-```
-
-Have an SVG file you want to include? No problem! Do this:
-
-```pug
-h1 This code will include logo.svg
-| {% raw %}{% include logo.svg %}{% endraw %}
-```
-
----
-
-### "Can I use Pug extends?"
-
-I'd highly recommend steering clear from using Pug extends with this plugin. Using Jekyll/Liquid templates is a lot more intuitive for this workflow.
-
-If you REALLY want to use them, this plugin looks in the `_includes` folder for extends. Just keep in mind you'll have a hard time getting Pug extends to work with your Jekyll blog posts.
-
----
-
-## Configuration
-
-Here are the different configuration options you can set in `_config.yml`.
-
-**Minification**
-
-Minification is disabled by default. 
-
-To turn it on, add this to your `_config.yml`:
-
-```yaml
-jekyll-pug:
-  minify: true
-```
-
-**Compiling to PHP instead of HTML**
-
-If you need PHP files instead of HTML files, enabling this feature will compile all pup files to `.php` files.
-
-I added this feature because it is very useful in my Wordpress theme development workflow.
-
-```yaml
-jekyll-pug:
-  php: true
-```
-
-
-**Enabling debug mode**
-
-If you are running into an issue, it could also help to enable Jekyll-Pug debugging. This will print a lot more to the console when your Jekyll project is building. **Debugging is disabled by default.**
-
-To enable debugging, use the following in your `_config.yml`:
-
-```yaml
-jekyll-pug:
-  debug: true
-```
-
-## Using Shipped Pug Versions
-
-**Important note:** Advanced Pug features such as includes, may not work using a shipped pug library. In this case, it is best to use Jekyll's built-in includes. (`| {% raw %}{% include nav %}{% endraw %}`)
-
-If you do not wish to install pug via NPM or if you are deploying to a location, [such as Siteleaf](#deploying-to-siteleaf), you can select a shipped Pug version via your `_config.yml`.
-
-```
-jekyll-pug:
-  shipped_version: 2.0.0-beta10
-```
-
-The current versions available are:
-
-```
-2.0.0-beta10
-2.0.0-beta11
-2.0.0-beta12
-2.0.0-beta1
-2.0.0-beta2
-2.0.0-beta3
-2.0.0-beta4
-2.0.0-beta5
-2.0.0-beta6
-2.0.0-beta7
-2.0.0-beta8
-2.0.0-beta9
-2.0.0-rc.1
-2.0.0-rc.2
-2.0.0-rc.3
-2.0.0-rc.4
-```
-
-## HTML5 Boilerplate
-
-If you're looking for a boilerplate template to speed up your Jekyll-Pug development even more, check out [J5 - A Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate](https://github.com/DougBeney/J5)
-
-## Deploying to Netlify
-
-Jekyll-Pug requires the Pug NPM package for its main functionality. 
+### Netlify
 
 First, create a file called `Makefile` with the following content:
 
 ```
 netlify:
-  npm install pug -g
-  jekyll build
+  npm install jekyll-bliss -g
+  bliss build
 ```
 
 Now, log into Netlify, go into your site settings, go to the "Build & deploy" section. Now, under "Deploy settings" click "Edit settings" and finally change your build command to `make netlify`.
 
 You're all set! Enjoy!
 
+### Github Pages
 
-## Deploying to Siteleaf
+I recommend checking out this [insightful thread](https://github.com/DougBeney/jekyll-pug/issues/14) for a viable solution to use Jekyll-Bliss with Github Pages. Ortonomy explains his solution later on in the thread.
 
-To deploy to Siteleaf, first make sure your `Gemfile` is properly set up. ([See Jekyll-Pug installation instructions using a Gemfile](#installation))
+# Results from using Jekyll-Bliss
 
-Next, make sure your `_config.yml` includes the following:
+I gave Jekyll-Bliss a test on my personal site, [dougie.io](https://dougie.io)
 
-```
-plugins:
-- jekyll-pug
+Keep in mind that a lot of optimization is yet to come and the build times will only shrink.
 
-jekyll-pug:
-  shipped_version: 2.0.0-beta10
-```
+## Before:
+bundle exec jekyll build  5.27s user 0.34s system 101% cpu 5.516 total
 
-You're all set! Enjoy having a full CMS with Jekyll-Pug!
+## After:
 
-**Note:** To use custom plugins, you must be a premium Siteleaf user. Currently Jekyll-Pug is not a whitelisted plugin by Siteleaf/Github. If/when that happens, users on the free plan will be able to use Jekyll-Pug. The whitelist is controlled by Github and you can view a list of [whitelisted plugins here](https://pages.github.com/versions/)
+**UPDATE 05/12/2018**: bliss build  2.03s user 0.18s system 132% cpu 1.662 total
 
-## Sites Using Jekyll-Pug
+~bliss  3.96s user 0.22s system 112% cpu 3.715 total~
 
-### Jekyll-Pug-Website [Free/Open-Source]
+# Using Jekyll-Pug? How to migrate from Jekyll-Pug to Jekyll-Bliss
 
-![Jekyll-Pug-Website screenshot](/static/img/promo/jekyll-pug-website.png)
+Jekyll-Bliss is nearly a drop-in replacement!
 
-- Link: [material.jekyll-pug.dougie.io](http://material.jekyll-pug.dougie.io)
-- Source: [github.com/DougBeney/Jekyll-Pug-Website](https://github.com/DougBeney/Jekyll-Pug-Website)
+First, remove Jekyll-Pug from your Gemfile.
 
-### Material-Jekyll-Pug [Free/Open-Source]
+Then, you have to prefix all of your Pug includes with the name of your include folder (`_includes/` by default).
 
-![Material-Jekyll-Pug screenshot](/static/img/promo/jekyll-pug-material.png)
+Note, if you used Liquid includes for Pug (`{% raw %}{% include nav.pug %}{% endraw %}`) you should change that to include an HTML file instead, which Jekyll-Bliss will generate. (`{% raw %}{% include nav.html %}{% endraw %}`)
 
-- Link: [material.jekyll-pug.dougie.io](http://material.jekyll-pug.dougie.io)
-- Source: [github.com/DougBeney/jekyll-pug-material](https://github.com/DougBeney/jekyll-pug-material)
+That's it! Enjoy!
 
-### Mover.io
+# Future
 
-![Mover.io screenshot](/static/img/promo/mover-io.png)
+For the time being, Jekyll-Bliss will remain a wrapper that goes over the top of Jekyll.
 
-- Link: [Mover.io](https://mover.io/)
-- Source: Private
+In the future, I would like to either:
 
----
+- Fork Jekyll, strip it of its unneeded features when in pair with Jekyll-Bliss to decrease build times further. Package the fork with Jekyll-Bliss
+- ..or create a minimal clone of Jekyll right in Node
 
-**Want your Jekyll-Pug website to be featured here?** [Submit it here](https://github.com/DougBeney/jekyll-pug/issues/6)
+Let's see where this project takes us!
 
-## Contributing
+## Development usage
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+If you'd like to tweak around with this project, do the following to set up an awesome dev environment.
 
-**How to create a development environment for contributing to this plugin:**
+`git clone` this repo. Cd into its directory and run `npm link`. Now you should be able to use the `bliss` terminal command anywhere.
 
-1. Clone the repo
-2. Run the command `bundle` in terminal.
-3. CD into the `test-site/` directory.
-4. Run the command `bundle` in terminal.
-5. Run `jekyll serve`
+`cd` into a Jekyll project somewhere else on your computer and then run `bliss` to test.
 
-**"What code do I modify?"**
+I like to have split terminal windows open. One in the Jekyll-Bliss project directory with `index.js` opened and another in a test jekyll site project directory.
 
-The code you should modify is in the `lib/` directory.
+# Donate
 
-- `lib/jekyll-pug.rb` - All this file does is require the main files of this plugin and work with the user's configuration file.
-- `lib/jekyll-pug/pug-renderer.rb` This file safely modifies Jekyll's rendering code.
-- `lib/jekyll-pug/include-tag.rb` This file safely modifies Jekyll's include tag, allowing for extension-less including and Pug support.
+If this project helps you out, I'd greatly appreciate a donation of any size.
 
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
+[![Beerpay](https://img.shields.io/beerpay/hashdog/scrapfy-chrome-extension.svg)](https://beerpay.io/DougBeney/Jekyll-Bliss)
 
-[![Beerpay](https://beerpay.io/DougBeney/jekyll-pug/badge.svg?style=beer-square)](https://beerpay.io/DougBeney/jekyll-pug)  [![Beerpay](https://beerpay.io/DougBeney/jekyll-pug/make-wish.svg?style=flat-square)](https://beerpay.io/DougBeney/jekyll-pug?focus=wish)

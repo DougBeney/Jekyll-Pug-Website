@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!DOCTYPE html><html lang="en"><head><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109573755-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,342 +7,132 @@
 
   gtag('config', 'UA-109573755-1');
 </script>
-    
-    <title>Jekyll-Pug Documentation / Tutorial</title>
-    
-    <meta name="description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!">
-    
+<title>Jekyll-Pug Documentation / Tutorial</title>
+<meta name="description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!">
 
 
 
 
-<!-- Twitter Card-->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:4000/static/img/twitter-card.png"/>
-<meta name="twitter:creator" content="@dougbeney"/>
-<meta name="twitter:site" content="@dougbeney"/>
-<meta name="twitter:title" content="Jekyll-Pug Documentation / Tutorial"/>
-<meta name="twitter:description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!"/>
-<!-- Facebook Open Graph-->
-<meta property="og:url" content="http://localhost:4000/docs.html"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Jekyll-Pug Documentation / Tutorial"/>
-<meta property="og:description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!"/>
-<meta property="og:image" content="http://localhost:4000/static/img/open-graph.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="apple-touch-icon" href="/static/img/favicon.png">
-    <link rel="icon" type="image/png" href="/static/img/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/main.css">
-  <script src="http://127.0.0.1:35729/livereload.js"></script></head>
-  <body>
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <nav class="navbar navbar-expand-lg bg-lightnavbar navbar-dark"><a class="navbar-brand" href="/">Jekyll-Pug</a><span class="navbar-text">Finally. A practical way to use Pug with Jekyll.</span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item "><a class="nav-link" target="" href="/">Home<span class="sr-only">(current)</span></a></li>
-      <li class="nav-item active"><a class="nav-link" target="" href="/docs">Documentation<span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" target="" href="/license">License<span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" target="_blank" href="https://github.com/DougBeney/jekyll-pug">Github<span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" target="" href="/contact">Contact<span class="sr-only">(current)</span></a></li>
-    </ul>
-  </div>
-</nav>
-    <div class="container page-container" id="docs">
-  <ul class="list-group docs-toc-mobile">
-    <li class="list-group-item"><a href="#installation">Installation</a></li>
-    <li class="list-group-item"><a href="#usage">Usage</a></li>
-    <li class="list-group-item"><a href="#configuration">Configuration</a></li>
-    <li class="list-group-item"><a href="#using-shipped-pug-versions">Using Shipped Pug Versions</a></li>
-    <li class="list-group-item"><a href="#html5-boilerplate">HTML5 Boilerplate</a></li>
-    <li class="list-group-item"><a href="#deploying-to-netlify">Deploying to Netlify</a></li>
-    <li class="list-group-item"><a href="#deploying-to-siteleaf">Deploying to Siteleaf</a></li>
-    <li class="list-group-item"><a href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a></li>
-    <li class="list-group-item"><a href="#contributing">Contributing</a></li>
-    <li class="list-group-item"><a href="#support-on-beerpay">Support on Beerpay</a></li>
-  </ul>
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="list-group docs-toc"><a class="list-group-item list-group-item-action" href="#installation">Installation</a><a class="list-group-item list-group-item-action" href="#usage">Usage</a><a class="list-group-item list-group-item-action" href="#configuration">Configuration</a><a class="list-group-item list-group-item-action" href="#using-shipped-pug-versions">Using Shipped Pug Versions</a><a class="list-group-item list-group-item-action" href="#html5-boilerplate">HTML5 Boilerplate</a><a class="list-group-item list-group-item-action" href="#deploying-to-netlify">Deploying to Netlify</a><a class="list-group-item list-group-item-action" href="#deploying-to-siteleaf">Deploying to Siteleaf</a><a class="list-group-item list-group-item-action" href="#sites-using-jekyll-pug">Sites Using Jekyll-Pug</a><a class="list-group-item list-group-item-action" href="#contributing">Contributing</a><a class="list-group-item list-group-item-action" href="#support-on-beerpay">Support on Beerpay</a></div>
-    </div>
-    <div class="col-lg-9 docs-content" data-spy="scroll" data-target="#docs" data-offset="50">
-      <h1>Documentation</h1><p>Finally be able to code with <a href="https://github.com/pugjs/pug">Pug</a> on <a href="http://github.com/mojombo/jekyll">Jekyll</a>.</p>
+<!-- Twitter Card--><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="http://jekyll-pug.dougie.io/static/img/twitter-card.png"/><meta name="twitter:creator" content="@dougbeney"/><meta name="twitter:site" content="@dougbeney"/><meta name="twitter:title" content="Jekyll-Pug Documentation / Tutorial"/><meta name="twitter:description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!"/><!-- Facebook Open Graph--><meta property="og:url" content="http://jekyll-pug.dougie.io/docs.html"/><meta property="og:type" content="website"/><meta property="og:title" content="Jekyll-Pug Documentation / Tutorial"/><meta property="og:description" content="Learn how to use the Jekyll-Pug plugin for Jekyll. Create static sites with ease!"/><meta property="og:image" content="http://jekyll-pug.dougie.io/static/img/open-graph.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><link rel="apple-touch-icon" href="/static/img/favicon.png"><link rel="icon" type="image/png" href="/static/img/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"><link rel="stylesheet" href="/static/css/main.css"></head><body><!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<nav class="navbar navbar-expand-lg bg-lightnavbar navbar-dark"><a class="navbar-brand" href="/">Use Pug with Jekyll</a><span class="navbar-text">Finally. A practical way to use Pug with Jekyll.</span><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto"><li class="nav-item "><a class="nav-link" target="" href="/">Home<span class="sr-only">(current)</span></a></li><li class="nav-item active"><a class="nav-link" target="" href="/docs">Documentation<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="" href="/license">License<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="_blank" href="https://github.com/DougBeney/jekyll-pug">Github<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="" href="/contact">Contact<span class="sr-only">(current)</span></a></li></ul></div></nav>
+<div class="container page-container" id="docs"><ul class="list-group docs-toc-mobile"><li class="list-group-item"><a href="#installation">Installation</a></li><li class="list-group-item"><a href="#usage">Usage</a></li><li class="list-group-item"><a href="#configuration">Configuration</a></li><li class="list-group-item"><a href="#deploying-to-various-platforms">Deploying to Various Platforms</a></li><li class="list-group-item"><a href="#results-from-using-jekyll-bliss">Results from using Jekyll-Bliss</a></li><li class="list-group-item"><a href="#using-jekyll-pug-how-to-migrate-from-jekyll-pug-to-jekyll-bliss">Migrate from Jekyll-Pug to Jekyll-Bliss</a></li><li class="list-group-item"><a href="#future">Future</a></li><li class="list-group-item"><a href="#development-usage">Development usage</a></li><li class="list-group-item"><a href="#donate">Donate</a></li></ul><div class="row"><div class="col-lg-3"><div class="list-group docs-toc"><a class="list-group-item list-group-item-action" href="#installation">Installation</a><a class="list-group-item list-group-item-action" href="#usage">Usage</a><a class="list-group-item list-group-item-action" href="#configuration">Configuration</a><a class="list-group-item list-group-item-action" href="#deploying-to-various-platforms">Deploying to Various Platforms</a><a class="list-group-item list-group-item-action" href="#results-from-using-jekyll-bliss">Results from using Jekyll-Bliss</a><a class="list-group-item list-group-item-action" href="#using-jekyll-pug-how-to-migrate-from-jekyll-pug-to-jekyll-bliss">Migrate from Jekyll-Pug to Jekyll-Bliss</a><a class="list-group-item list-group-item-action" href="#future">Future</a><a class="list-group-item list-group-item-action" href="#development-usage">Development usage</a><a class="list-group-item list-group-item-action" href="#donate">Donate</a></div></div><div class="col-lg-9 docs-content" data-spy="scroll" data-target="#docs" data-offset="50"><h1>Documentation</h1><p>Jekyll is my favorite static site generator because it is very non-opinionated. The folder structure is super simplistic and feels natural.</p>
 
-<p>Created by <a href="https://dougie.io">Doug Beney</a>.</p>
+<p>However, there is one major problem with Jekyll: <strong>The build time</strong>. If you have a small site, this may not be a problem, but once you start accumulating many posts, installing a variety of plugins and using many files that should be preprocessed, your build time will skyrocket.</p>
 
-<p>If you enjoy this project, do <a href="http://jekyll-pug.dougie.io/">sign up for my email list</a> to receive info on other plugins and tools I create for Jekyll.</p>
+<p>The aims of this project is to allow Jekyll-Bliss to do all of the heavy-lifting (Markdown, JS, Sass/SCSS, Pug, etc) and allow Jekyll to do the smallest amount of work possible - compiling HTML files.</p>
 
-<h2 id="installation">Installation</h2>
+<h1 id="installation">Installation</h1>
 
-<p><strong>Note:</strong> you must have <a href="https://www.npmjs.com/package/pug">pug</a> installed. To install it, simply enter the terminal command, <code>npm install pug -g</code>. If you don&#39;t already have NPM/Node installed, <a href="https://www.npmjs.com/get-npm">here are instructions</a></p>
+<p>To install: <code>npm install jekyll-bliss -g</code></p>
 
-<p>There are two ways to install this plugin.</p>
+<h1 id="usage">Usage</h1>
 
-<p><strong>Way #1 - Bundler (Recommended)</strong></p>
+<p>The command is <code>bliss</code>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>  Usage: bliss [options]
 
-<p>Since Bundler is now implemented into the Jekyll project, it is recommended to manage plugins using a Gemfile.</p>
+  Options:
 
-<p>Create a file named <code>Gemfile</code> in the root directory of your project and input the following code:</p>
-<div class="highlight"><pre><code class="language-rb" data-lang="rb"><span></span><span class="n">source</span> <span class="s2">&quot;https://rubygems.org/&quot;</span>
+    -V, --version  output the version number
+    -h, --help     output usage information
 
-<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;jekyll-pug&#39;</span>
-  <span class="c1"># Add other Jekyll plugins you are using below this line.</span>
-<span class="k">end</span>
+  Commands:
+
+    build          Build your site
+    serve,server,s Serve your site locally w/ livereload
+    clean          Remove build directory
+    config         Display the current configuraton
 </code></pre></div>
-<p>After that, type <code>bundle install</code> in your Terminal.</p>
+<h1 id="configuration">Configuration</h1>
 
-<p>You&#39;re done!</p>
-
-<p><strong>Way #2 - Installing the gem globally</strong></p>
-
-<p>In your terminal, type <code>gem install jekyll-pug</code>.</p>
-
-<p>Then, edit your <code>_config.yml</code> and add the following.</p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">plugins</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jekyll-pug</span>
+<p>Here are the default values Jekyll-Bliss uses. You can override these in your _config.yaml</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">source</span><span class="p p-Indicator">:</span> <span class="s">&#39;&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">destination</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">_site</span>
+<span class="l l-Scalar l-Scalar-Plain">exclude</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[]</span>
+<span class="l l-Scalar l-Scalar-Plain">jekyll-bliss</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">build-folder</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">_build</span>
+  <span class="l l-Scalar l-Scalar-Plain">delete-build-folder</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">source</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+  <span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">livereload</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">watch</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-<p>You&#39;re done!</p>
+<p><strong>Note:</strong> If you enable <code>livereload</code>, <code>watch</code> will automatically be enabled too.</p>
 
-<hr>
+<h2 id="deploying-to-various-platforms">Deploying to Various Platforms</h2>
 
-<h2 id="configuration">Configuration</h2>
-
-<p>Here are the different configuration options you can set in <code>_config.yml</code>.</p>
-
-<p><strong>Minification</strong></p>
-
-<p>Minification is disabled by default. </p>
-
-<p>To turn it on, add this to your <code>_config.yml</code>:</p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">jekyll-pug</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">minify</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-<p><strong>Compiling to PHP instead of HTML</strong></p>
-
-<p>If you need PHP files instead of HTML files, enabling this feature will compile all pup files to <code>.php</code> files.</p>
-
-<p>I added this feature because it is very useful in my Wordpress theme development workflow.</p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">jekyll-pug</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">php</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-<p><strong>Enabling debug mode</strong></p>
-
-<p>If you are running into an issue, it could also help to enable Jekyll-Pug debugging. This will print a lot more to the console when your Jekyll project is building. <strong>Debugging is disabled by default.</strong></p>
-
-<p>To enable debugging, use the following in your <code>_config.yml</code>:</p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="l l-Scalar l-Scalar-Plain">jekyll-pug</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-</code></pre></div>
-<h2 id="usage">Usage</h2>
-
-<p>Now you can create Pug pages, templates, and includes, just like you would with HTML files.</p>
-
-<p><strong>Important:</strong> Always make sure to have YAML front matter at the top of your pug pages. Layouts and includes don&#39;t need this, but plain-old pages do.</p>
-
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="p">-</span><span class="o">--</span>
-<span class="p">-</span><span class="o">--</span>
-
-<span class="nt">h1</span> Hello World!
-</code></pre></div>
-<hr>
-
-<p><strong>Practical Example:</strong></p>
-
-<p><strong>index.pug</strong></p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="p">-</span><span class="o">--</span>
-<span class="nt">title:</span> Home Page
-<span class="nt">layout:</span> default
-<span class="p">-</span><span class="o">--</span>
-
-<span class="nt">p</span> Welcome to my home page. Isn&#39;t it awesome?
-</code></pre></div>
-<p><strong>_layouts/default.pug</strong></p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="nt">doctype</span>
-<span class="nt">html</span>
-    <span class="nt">head</span>
-        <span class="nt">title</span> {{page.title}}
-    <span class="nt">body</span>
-        <span class="nt">h1</span> {{page.title}}
-        | {{content}}
-</code></pre></div>
-<hr>
-
-<h3 id="include">Include</h3>
-
-<p>Jekyll&#39;s <code>include</code> tag has been safely modified to support pug. Pug&#39;s native <code>include</code> tag will also look in the <code>_includes</code> folder.</p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="nt">h1</span> This code will include nav.pug
-| {% include nav %}
-
-<span class="nt">h1</span> Or you could use Pug&#39;s native include tag
-<span class="nt">include</span> nav
-</code></pre></div>
-<p><strong>Note</strong>: The <code>|</code> symbol in this example code is a pipe character which tells Pug that we would like to render plain-text. Since Pug&#39;s templating engine processes our code before Jekyll, it&#39;s important to include this pipe character. <a href="https://pugjs.org/language/plain-text.html#piped-text">Read more  about piped text here</a>.</p>
-
-<p>You can alternatively type the extension out.</p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="nt">h1</span> This code will include nav.pug
-| {% include nav.pug %}
-</code></pre></div>
-<p>Have an HTML file you want to include? No problem! Do this:</p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="nt">h1</span> This code will include nav.html
-| {% include nav.html %}
-</code></pre></div>
-<p>Have an SVG file you want to include? No problem! Do this:</p>
-<div class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="nt">h1</span> This code will include logo.svg
-| {% include logo.svg %}
-</code></pre></div>
-<hr>
-
-<h3 id="can-i-use-pug-extends">&quot;Can I use Pug extends?&quot;</h3>
-
-<p>I&#39;d highly recommend steering clear from using Pug extends with this plugin. Using Jekyll/Liquid templates is a lot more intuitive for this workflow.</p>
-
-<p>If you REALLY want to use them, this plugin looks in the <code>_includes</code> folder for extends. Just keep in mind you&#39;ll have a hard time getting Pug extends to work with your Jekyll blog posts.</p>
-
-<hr>
-
-<h2 id="using-shipped-pug-versions">Using Shipped Pug Versions</h2>
-
-<p><strong>Important note:</strong> Advanced Pug features such as includes, may not work using a shipped pug library. In this case, it is best to use Jekyll&#39;s built-in includes. (<code>| {% include nav %}</code>)</p>
-
-<p>If you do not wish to install pug via NPM or if you are deploying to a location, <a href="#deploying-to-siteleaf">such as Siteleaf</a>, you can select a shipped Pug version via your <code>_config.yml</code>.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>jekyll-pug:
-  shipped_version: 2.0.0-beta10
-</code></pre></div>
-<p>The current versions available are:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>2.0.0-beta10
-2.0.0-beta11
-2.0.0-beta12
-2.0.0-beta1
-2.0.0-beta2
-2.0.0-beta3
-2.0.0-beta4
-2.0.0-beta5
-2.0.0-beta6
-2.0.0-beta7
-2.0.0-beta8
-2.0.0-beta9
-2.0.0-rc.1
-2.0.0-rc.2
-2.0.0-rc.3
-2.0.0-rc.4
-</code></pre></div>
-<h2 id="html5-boilerplate">HTML5 Boilerplate</h2>
-
-<p>If you&#39;re looking for a boilerplate template to speed up your Jekyll-Pug development even more, check out <a href="https://github.com/DougBeney/J5">J5 - A Jekyll, Pug, Sass, and Livereload HTML5 Boilerplate</a></p>
-
-<h2 id="deploying-to-netlify">Deploying to Netlify</h2>
-
-<p>Jekyll-Pug requires the Pug NPM package for its main functionality. </p>
+<h3 id="netlify">Netlify</h3>
 
 <p>First, create a file called <code>Makefile</code> with the following content:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>netlify:
-  npm install pug -g
-  jekyll build
+  npm install jekyll-bliss -g
+  bliss build
 </code></pre></div>
 <p>Now, log into Netlify, go into your site settings, go to the &quot;Build &amp; deploy&quot; section. Now, under &quot;Deploy settings&quot; click &quot;Edit settings&quot; and finally change your build command to <code>make netlify</code>.</p>
 
 <p>You&#39;re all set! Enjoy!</p>
 
-<h2 id="deploying-to-siteleaf">Deploying to Siteleaf</h2>
+<h3 id="github-pages">Github Pages</h3>
 
-<p>To deploy to Siteleaf, first make sure your <code>Gemfile</code> is properly set up. (<a href="#installation">See Jekyll-Pug installation instructions using a Gemfile</a>)</p>
+<p>I recommend checking out this <a href="https://github.com/DougBeney/jekyll-pug/issues/14">insightful thread</a> for a viable solution to use Jekyll-Bliss with Github Pages. Ortonomy explains his solution later on in the thread.</p>
 
-<p>Next, make sure your <code>_config.yml</code> includes the following:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>plugins:
-- jekyll-pug
+<h1 id="results-from-using-jekyll-bliss">Results from using Jekyll-Bliss</h1>
 
-jekyll-pug:
-  shipped_version: 2.0.0-beta10
-</code></pre></div>
-<p>You&#39;re all set! Enjoy having a full CMS with Jekyll-Pug!</p>
+<p>I gave Jekyll-Bliss a test on my personal site, <a href="https://dougie.io">dougie.io</a></p>
 
-<p><strong>Note:</strong> To use custom plugins, you must be a premium Siteleaf user. Currently Jekyll-Pug is not a whitelisted plugin by Siteleaf/Github. If/when that happens, users on the free plan will be able to use Jekyll-Pug. The whitelist is controlled by Github and you can view a list of <a href="https://pages.github.com/versions/">whitelisted plugins here</a></p>
+<p>Keep in mind that a lot of optimization is yet to come and the build times will only shrink.</p>
 
-<h2 id="sites-using-jekyll-pug">Sites Using Jekyll-Pug</h2>
+<h2 id="before">Before:</h2>
 
-<h3 id="jekyll-pug-website-free-open-source">Jekyll-Pug-Website [Free/Open-Source]</h3>
+<p>bundle exec jekyll build  5.27s user 0.34s system 101% cpu 5.516 total</p>
 
-<p><img src="/static/img/promo/jekyll-pug-website.png" alt="Jekyll-Pug-Website screenshot"></p>
+<h2 id="after">After:</h2>
 
-<ul>
-<li>Link: <a href="http://material.jekyll-pug.dougie.io">material.jekyll-pug.dougie.io</a></li>
-<li>Source: <a href="https://github.com/DougBeney/Jekyll-Pug-Website">github.com/DougBeney/Jekyll-Pug-Website</a></li>
-</ul>
+<p><strong>UPDATE 05/12/2018</strong>: bliss build  2.03s user 0.18s system 132% cpu 1.662 total</p>
 
-<h3 id="material-jekyll-pug-free-open-source">Material-Jekyll-Pug [Free/Open-Source]</h3>
+<p>~bliss  3.96s user 0.22s system 112% cpu 3.715 total~</p>
 
-<p><img src="/static/img/promo/jekyll-pug-material.png" alt="Material-Jekyll-Pug screenshot"></p>
+<h1 id="using-jekyll-pug-how-to-migrate-from-jekyll-pug-to-jekyll-bliss">Using Jekyll-Pug? How to migrate from Jekyll-Pug to Jekyll-Bliss</h1>
 
-<ul>
-<li>Link: <a href="http://material.jekyll-pug.dougie.io">material.jekyll-pug.dougie.io</a></li>
-<li>Source: <a href="https://github.com/DougBeney/jekyll-pug-material">github.com/DougBeney/jekyll-pug-material</a></li>
-</ul>
+<p>Jekyll-Bliss is nearly a drop-in replacement!</p>
 
-<h3 id="mover-io">Mover.io</h3>
+<p>First, remove Jekyll-Pug from your Gemfile.</p>
 
-<p><img src="/static/img/promo/mover-io.png" alt="Mover.io screenshot"></p>
+<p>Then, you have to prefix all of your Pug includes with the name of your include folder (<code>_includes/</code> by default).</p>
 
-<ul>
-<li>Link: <a href="https://mover.io/">Mover.io</a></li>
-<li>Source: Private</li>
-</ul>
+<p>Note, if you used Liquid includes for Pug (<code>{% include nav.pug %}</code>) you should change that to include an HTML file instead, which Jekyll-Bliss will generate. (<code>{% include nav.html %}</code>)</p>
 
-<hr>
+<p>That&#39;s it! Enjoy!</p>
 
-<p><strong>Want your Jekyll-Pug website to be featured here?</strong> <a href="https://github.com/DougBeney/jekyll-pug/issues/6">Submit it here</a></p>
+<h1 id="future">Future</h1>
 
-<h2 id="contributing">Contributing</h2>
+<p>For the time being, Jekyll-Bliss will remain a wrapper that goes over the top of Jekyll.</p>
 
-<ol>
-<li>Fork it</li>
-<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-<li>Commit your changes (<code>git commit -am &#39;Add some feature&#39;</code>)</li>
-<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
-<li>Create new Pull Request</li>
-</ol>
-
-<p><strong>How to create a development environment for contributing to this plugin:</strong></p>
-
-<ol>
-<li>Clone the repo</li>
-<li>Run the command <code>bundle</code> in terminal.</li>
-<li>CD into the <code>test-site/</code> directory.</li>
-<li>Run the command <code>bundle</code> in terminal.</li>
-<li>Run <code>jekyll serve</code></li>
-</ol>
-
-<p><strong>&quot;What code do I modify?&quot;</strong></p>
-
-<p>The code you should modify is in the <code>lib/</code> directory.</p>
+<p>In the future, I would like to either:</p>
 
 <ul>
-<li><code>lib/jekyll-pug.rb</code> - All this file does is require the main files of this plugin and work with the user&#39;s configuration file.</li>
-<li><code>lib/jekyll-pug/pug-renderer.rb</code> This file safely modifies Jekyll&#39;s rendering code.</li>
-<li><code>lib/jekyll-pug/include-tag.rb</code> This file safely modifies Jekyll&#39;s include tag, allowing for extension-less including and Pug support.</li>
+<li>Fork Jekyll, strip it of its unneeded features when in pair with Jekyll-Bliss to decrease build times further. Package the fork with Jekyll-Bliss</li>
+<li>..or create a minimal clone of Jekyll right in Node</li>
 </ul>
 
-<h2 id="support-on-beerpay">Support on Beerpay</h2>
+<p>Let&#39;s see where this project takes us!</p>
 
-<p>Hey dude! Help me out for a couple of :beers:!</p>
+<h2 id="development-usage">Development usage</h2>
 
-<p><a href="https://beerpay.io/DougBeney/jekyll-pug"><img src="https://beerpay.io/DougBeney/jekyll-pug/badge.svg?style=beer-square" alt="Beerpay"></a>  <a href="https://beerpay.io/DougBeney/jekyll-pug?focus=wish"><img src="https://beerpay.io/DougBeney/jekyll-pug/make-wish.svg?style=flat-square" alt="Beerpay"></a></p>
+<p>If you&#39;d like to tweak around with this project, do the following to set up an awesome dev environment.</p>
 
-    </div>
-  </div>
-</div>
-    <footer class="footer">
-  <div class="container"><span class="text-muted">© 2017 FloeMedia, LLC.</span></div>
-</footer>
-    
-    <script src="/static/js/main.js"></script>
-  </body>
-</html>
+<p><code>git clone</code> this repo. Cd into its directory and run <code>npm link</code>. Now you should be able to use the <code>bliss</code> terminal command anywhere.</p>
+
+<p><code>cd</code> into a Jekyll project somewhere else on your computer and then run <code>bliss</code> to test.</p>
+
+<p>I like to have split terminal windows open. One in the Jekyll-Bliss project directory with <code>index.js</code> opened and another in a test jekyll site project directory.</p>
+
+<h1 id="donate">Donate</h1>
+
+<p>If this project helps you out, I&#39;d greatly appreciate a donation of any size.</p>
+
+<p><a href="https://beerpay.io/DougBeney/Jekyll-Bliss"><img src="https://img.shields.io/beerpay/hashdog/scrapfy-chrome-extension.svg" alt="Beerpay"></a></p>
+</div></div></div>
+<footer class="footer"><div class="container"><span class="text-muted">© 2017 FloeMedia, LLC.</span></div></footer>
+<script src="/static/js/main.js"></script></body></html>

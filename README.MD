@@ -6,7 +6,7 @@ Welcome! This is the source code for the Jekyll-Pug website. Edit away and have 
 [Website](http://jekyll-pug.dougie.io/) - [Jekyll-Pug Plugin](https://github.com/DougBeney/jekyll-pug)
 
 
-## What the heck is docsRegexReplacer? 
+## What the heck is docsRegexReplacer.rb? 
 
 Well, it is an insanely epic Ruby script that will update our documentation and license templates automatically, pulling data from Github.
 

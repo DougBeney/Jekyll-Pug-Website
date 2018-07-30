@@ -3,9 +3,9 @@ nav.navbar.navbar-expand-lg.bg-lightnavbar.navbar-dark
 	span.navbar-text {{site.description}}
 	button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-label='Toggle navigation')
 		span.navbar-toggler-icon
-	
+
 	#navbarSupportedContent.collapse.navbar-collapse
-		
+
 		ul.navbar-nav.ml-auto
 			| {% for nav in site.data.nav %}
 			li.nav-item(class="{% if nav.name == page.title %}active{% endif %}")
@@ -13,4 +13,4 @@ nav.navbar.navbar-expand-lg.bg-lightnavbar.navbar-dark
 					| {{nav.name}}
 					span.sr-only (current)
 			| {% endfor %}
-		
+
