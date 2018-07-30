@@ -2,8 +2,8 @@ all:
 	echo "Welcome!"
 
 netlify:
-	npm install -g pug
-	jekyll build
+	npm install -g jekyll-bliss
+	bliss build
 
 update: update_documentation update_license
 
