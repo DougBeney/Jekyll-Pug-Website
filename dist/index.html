@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head><!-- Global site tag (gtag.js) - Google Analytics -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109573755-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -7,36 +10,149 @@
 
   gtag('config', 'UA-109573755-1');
 </script>
-<title>Jekyll-Bliss - The Ultimate Pug Integration For Jekyll</title>
-<meta name="description" content="If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss.">
+    
+    <title>Jekyll-Bliss - The Ultimate Pug Integration For Jekyll</title>
+    
+    <meta name="description" content="If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss.">
+    
 
 
 
 
-<!-- Twitter Card--><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content="http://jekyll-pug.dougie.io/static/img/twitter-card.png"/><meta name="twitter:creator" content="@dougbeney"/><meta name="twitter:site" content="@dougbeney"/><meta name="twitter:title" content="Jekyll-Bliss - The Ultimate Pug Integration For Jekyll"/><meta name="twitter:description" content="If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss."/><!-- Facebook Open Graph--><meta property="og:url" content="http://jekyll-pug.dougie.io/"/><meta property="og:type" content="website"/><meta property="og:title" content="Jekyll-Bliss - The Ultimate Pug Integration For Jekyll"/><meta property="og:description" content="If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss."/><meta property="og:image" content="http://jekyll-pug.dougie.io/static/img/open-graph.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><link rel="apple-touch-icon" href="/static/img/favicon.png"><link rel="icon" type="image/png" href="/static/img/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"><link rel="stylesheet" href="/static/css/main.css"></head><body><!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-<nav class="navbar navbar-expand-lg bg-lightnavbar navbar-dark"><a class="navbar-brand" href="/">Use Pug with Jekyll</a><span class="navbar-text">Finally. A practical way to use Pug with Jekyll.</span><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto"><li class="nav-item active"><a class="nav-link" target="" href="/">Home<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="" href="/docs">Documentation<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="" href="/license">License<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="_blank" href="https://github.com/DougBeney/jekyll-pug">Github<span class="sr-only">(current)</span></a></li><li class="nav-item "><a class="nav-link" target="" href="/contact">Contact<span class="sr-only">(current)</span></a></li></ul></div></nav>
-<div class="jumbotron"><div class="container"><div class="row"><div class="col"><h1 class="display-3">Jekyll-Bliss</h1><p class="lead">Easily and Intuitively Use Pug For Developing Jekyll Websites.</p><hr class="my-4"/><p class="lead"><a class="btn btn-primary btn-lg" href="/docs" role="button">Getting Started</a></p><p>You can also view this project on <a href="https://gitlab.com/DougBeney/Jekyll-Bliss">on Gitlab</a></p></div><div class="col-md-4"><h2>Install with one command</h2>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ npm install jekyll-bliss -g</code></pre></figure></div><div class="col-md-1"></div></div></div></div><div class="container"><form class="form-inline" action="https://DougBeney.us12.list-manage.com/subscribe/post?u=792eb576c08df172439ec58e3&amp;id=28a1d42cd0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate=""><div class="form-group"><label>Want to keep up with other projects I create in the open-source world?</label></div><div class="form-group mx-sm-3"><input class="form-control" type="email" value="" placeholder="Enter your email" name="EMAIL"/><input type="hidden" value="1" name="group[10057][1]" id="mce-group[10057]-10057-0" checked=""/></div><div class="clear" id="mce-responses"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_792eb576c08df172439ec58e3_28a1d42cd0" tabindex="-1" value=""/></div><div class="clear"><button class="btn btn-success" type="submit" value="Subscribe" name="subscribe">Subscribe</button></div></form><br/><hr/></div><div class="container code-demo"><h2 class="h1 text-center">Input and Output</h2><div class="col"><div class="row"><div class="col"><pre id="frontpage_code"><h3>Index.pug</h3><figure class="highlight"><pre><code class="language-pug" data-lang="pug"><span></span><span class="p">-</span><span class="o">--</span>
-<span class="nt">title:</span> My Awesome Page
-<span class="p">-</span><span class="o">--</span>
 
-<span class="nt">h1</span> Welcome to {{page.title}}
+<!-- Twitter Card-->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://jekyll-pug.dougie.io/static/img/twitter-card.png"/>
+<meta name="twitter:creator" content="@dougbeney"/>
+<meta name="twitter:site" content="@dougbeney"/>
+<meta name="twitter:title" content="Jekyll-Bliss - The Ultimate Pug Integration For Jekyll"/>
+<meta name="twitter:description" content="If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss."/>
+<!-- Facebook Open Graph-->
+<meta property="og:url" content="http://jekyll-pug.dougie.io/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Jekyll-Bliss - The Ultimate Pug Integration For Jekyll"/>
+<meta property="og:description" content="If you're building a static site with Jekyll and would love to use Pug as a templating engine, look no further than Jekyll-Bliss."/>
+<meta property="og:image" content="http://jekyll-pug.dougie.io/static/img/open-graph.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="apple-touch-icon" href="/static/img/favicon.png">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+<nav class="navbar navbar-expand-lg bg-lightnavbar navbar-dark"><a class="navbar-brand" href="/">Use Pug with Jekyll</a><span class="navbar-text">Finally. A practical way to use Pug with Jekyll.</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" target="" href="/">Home<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item "><a class="nav-link" target="_blank" href="https://github.com/DougBeney/jekyll-pug">GitHub<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item "><a class="nav-link" target="" href="/contact">Contact<span class="sr-only">(current)</span></a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-3">Jekyll-Bliss & Jekyll-Pug</h1>
+        <p class="lead">Two easy ways to use Pug with Jekyll.</p>
+        <hr class="my-4"/>
+        <p class="lead"><a class="btn btn-primary btn-lg" href="https://github.com/DougBeney/jekyll-pug#introduction" role="button">Learn more about both</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <form class="form-inline" action="https://DougBeney.us12.list-manage.com/subscribe/post?u=792eb576c08df172439ec58e3&amp;id=28a1d42cd0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+    <div class="form-group">
+      <label>Want to keep up with other projects I create in the open-source world?</label>
+    </div>
+    <div class="form-group mx-sm-3">
+      <input class="form-control" type="email" value="" placeholder="Enter your email" name="EMAIL"/>
+      <input type="hidden" value="1" name="group[10057][1]" id="mce-group[10057]-10057-0" checked=""/>
+    </div>
+    <div class="clear" id="mce-responses">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_792eb576c08df172439ec58e3_28a1d42cd0" tabindex="-1" value=""/>
+    </div>
+    <div class="clear">
+      <button class="btn btn-success" type="submit" value="Subscribe" name="subscribe">Subscribe</button>
+    </div>
+  </form><br/>
+  <hr/>
+</div>
+<div class="container code-demo">
+  <h2 class="h1 text-center">Input and Output</h2>
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <pre id="frontpage_code">
+          <h3>Index.pug</h3><figure class="highlight"><pre><code class="language-pug" data-lang="pug">---
+title: My Awesome Page
+---
 
-<span class="nt">h2</span> Here is some Pug code
-<span class="nt">include</span> some_pug_code
+h1 Welcome to {{page.title}}
 
-<span class="nt">h2</span> Here is an Einstein quote
-<span class="nt">include</span> quotes/einstein.html</code></pre></figure></pre></div><div class="col"><pre id="frontpage_code"><h3>Index.html</h3><figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Awesome Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+h2 Here is some Pug code
+include some_pug_code
 
-<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Here is some Pug code<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>I am a pug file in the _includes folder!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+h2 Here is an Einstein quote
+include quotes/einstein.html</code></pre></figure></pre>
+      </div>
+      <div class="col">
+        <pre id="frontpage_code">
+          <h3>Index.html</h3><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Welcome to My Awesome Page<span class="nt">&lt;/h1&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Here is an Einstein quote<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
-&quot;Life is like riding a bicycle.
-To keep your balance you must keep moving.&quot;
-<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span></code></pre></figure></pre></div></div></div></div><div class="features-block white-text"><div class="container features"><div class="row first-row"><div class="col-md"><h3>Contribute</h3><p>Aching to add a feature or improve an exisiting one? Your help would be greatly appreciated.</p><a class="btn btn-outline-info" href="https://gitlab.com/DougBeney/jekyll-Bliss#development-usage" role="button">Contribute</a></div><div class="col-md"><h3>Support This Project</h3><p>If you feel inclined to donate, do check out our BeerPay page.</p><a class="btn btn-outline-info" href="https://beerpay.io/DougBeney/jekyll-Bliss" role="button">Donate</a></div></div><div class="row"><div class="col-md"></div><div class="col-md"><h3>Edit This Website</h3><p>This open-source website was created using Jekyll-Pug, J5, and Bootstrap 4.0.</p><a class="btn btn-outline-info" href="https://github.com/DougBeney/Jekyll-Pug-Website" role="button">Edit This Site</a></div><div class="col-md"></div></div></div></div>
-<footer class="footer"><div class="container"><span class="text-muted">© 2018 FloeMedia, LLC.</span></div></footer>
-<script src="/static/js/main.js"></script></body></html>
+<span class="nt">&lt;h2&gt;</span>Here is some Pug code<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;p&gt;</span>I am a pug file in the _includes folder!<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h2&gt;</span>Here is an Einstein quote<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;blockquote&gt;</span>
+"Life is like riding a bicycle.
+To keep your balance you must keep moving."
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></figure></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="features-block white-text">
+  <div class="container features">
+    <div class="row first-row">
+      <div class="col-md">
+        <h3>Contribute</h3>
+        <p>Aching to add a feature or improve an exisiting one? Your help would be greatly appreciated.</p><a class="btn btn-outline-info" href="https://github.com/DougBeney/jekyll-pug" role="button">Contribute</a>
+      </div>
+      <div class="col-md">
+        <h3>Support This Project</h3>
+        <p>If you feel inclined to donate, do check out our BeerPay page.</p><a class="btn btn-outline-info" href="https://beerpay.io/DougBeney/jekyll-Bliss" role="button">Donate</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md"></div>
+      <div class="col-md">
+        <h3>Edit This Website</h3>
+        <p>This open-source website was created using Jekyll-Pug, J5, and Bootstrap 4.0.</p><a class="btn btn-outline-info" href="https://github.com/DougBeney/Jekyll-Pug-Website" role="button">Edit This Site</a>
+      </div>
+      <div class="col-md"></div>
+    </div>
+  </div>
+</div>
+    
+<footer class="footer">
+  <div class="container"><span class="text-muted">Made by <a href="https://dougie.io">Dougie Beney</a></span></div>
+</footer>
+    
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

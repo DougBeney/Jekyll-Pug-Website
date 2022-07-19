@@ -1,19 +1,13 @@
 title: Use Pug with Jekyll
 description: Finally. A practical way to use Pug with Jekyll.
 
-source: "src"
+source: src
 destination: "dist"
 
 url: http://jekyll-pug.dougie.io
 livereload: true
 sass:
   sass_dir: static/css
-
-highlighter: pygments
-markdown: redcarpet
-
-redcarpet:
-  extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
 TwitterImage: /static/img/twitter-card.png
 FacebookImage: /static/img/open-graph.png
